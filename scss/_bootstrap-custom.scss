@@ -1,0 +1,27 @@
+// custom variables and override bootstrap variables
+$white: #fff; 
+$green: #00bc9c;
+$blue: #506a85;
+
+$text-color: $blue;
+$body-bg: $white;
+$link-color: $blue;
+
+$font-family1: 'Source Sans Pro', 'Arial', sans-serif;
+$font-family2: 'Lato', 'Arial', sans-serif;
+
+$base-font-size: 16px;
+$base-line-height: 22px;
+$base-font-family: $font-family1;
+
+$container-large-desktop: 1170px;
+
+/*Buttons*/
+$btn-font-weight :bold;
+$btn-primary-color: #fff;
+$btn-primary-bg: $green;
+
+/*Forms*/
+$input-bg: #4e5c6c;
+$input-color: $white;
+$input-color-placeholder: #a3b1bf;

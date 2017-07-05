@@ -1,0 +1,61 @@
+.social {
+	@extend %listreset;
+	font-size: 0;
+	@include media("<low-phone") {
+		width: 100%;
+		text-align: center;
+	}
+	@include media("print") {
+		display: none;
+	}
+	li {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.facebook a {
+		font-size: 16px;
+		padding: 12px 0;
+		&:hover {
+			background: #4668b3;
+		}
+	}
+	.google a {
+		&:hover {
+			background: #de5745;
+		}
+	}
+	.twitter a {
+		&:hover {
+			background: #2fbbed;
+		}
+	}
+	.pinterest a {
+		&:hover {
+			background: #d94348;
+		}
+	}
+	.behance a {
+		font-size: 14px;
+		padding: 13px 0;
+		&:hover {
+			background: #3079ff;
+		}
+	}
+	.dribbble a {
+		&:hover {
+			background: #eb6397;
+		}
+	}
+	a {
+		@include animate (background color, 0.3s);
+		padding: 14px 0;
+		width: 30px;
+		font-size: 12px;
+		display: block;
+		text-align: center;
+		&:hover {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.btn {
+	@include animate (background, 0.3s);
+	text-transform: uppercase;
+	border: none;
+	padding: 15px 24px;
+	border-bottom: 2px solid #00a085;
+	font-size: 16px;
+	line-height: 18px;
+	@include media("print") {
+		display: none;
+	}
+	&.btn-primary {
+		&:hover {
+			background: #17a78b;
+			border-bottom: 2px solid #148e75;
+		}
+	}
+	&.btn-sm {
+		font-size: 14px;
+		line-height: 16px;
+		padding: 11px 21px;
+	}
+	&.btn-lg {
+		border-radius: 4px;
+		padding: 20px 72px;
+		@include media("<desktop") {
+			padding: 15px 40px;
+		}
+	}
+}

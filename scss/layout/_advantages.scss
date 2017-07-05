@@ -1,0 +1,50 @@
+.advantages {
+	padding-top: 33px;
+	@include media("print") {
+		padding-top: 0;
+	}
+	h3 {
+		font-size: 26px;
+		line-height: 28px;
+		margin: 0 0 25px;
+		text-transform: none;
+		@include media("<desktop") {
+			font-size: 20px;
+			line-height: 22px;
+			margin: 0 0 15px;
+		}
+	}
+	.icon {
+		float: left;
+		color: $green;
+		margin: 0 25px 0 0;
+		font-size: 66px;
+		@include media("<desktop") {
+			font-size: 48px;
+			margin: 0 15px 0 0;
+		}
+		@include media("print") {
+			display: none;
+		}
+	}
+	.icon-star {
+		font-size: 54px;
+		font-weight: 900;
+		min-width: 66px;
+		text-align: center;
+		@include media("<desktop") {
+			font-size: 42px;
+			min-width: 48px;
+		}
+	}
+	.info {
+		overflow: hidden;
+		line-height: 25px;
+		@include media("<desktop") {
+			line-height: 20px;
+		}
+		@include media("print") {
+			line-height: 20px;
+		}
+	}
+}

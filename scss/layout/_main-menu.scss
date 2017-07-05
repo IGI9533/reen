@@ -1,0 +1,118 @@
+.navbar-main {
+	@include media("<tablet") {
+		margin: 0;
+	}
+	@include media("print") {
+		display: block;
+	}
+	.main-menu {
+		@include media("<tablet") {
+			padding: 0 15px;
+		}
+		@include media("print") {
+			display: none;
+		}
+		> li {
+			position: static;
+			&.home {
+				position: relative;
+				.dropdown-main-menu {
+					width: auto;
+					padding: 0;
+					min-width: 210px;
+					ul {
+						@extend %listreset;
+						padding: 0;
+					}
+					li {
+						&:first-child a{
+							border-top: none;
+						}
+						&:last-child a{
+							border-radius: 0 0 3px 3px;
+						}
+					}
+					a {
+						text-transform: uppercase;
+						font-weight: bold;
+						padding: 10px 19px;
+						display: block;
+						border-top: 1px solid #e6e9ed;
+						@include media("<tablet") {
+							border-color: transparent;
+						}
+						&:hover {
+							background: $green;
+							color: #fff;
+							border-top: 1px solid $green;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			> a {
+				@include animate (color, 0.1s);
+				color: $blue;
+				font-size: 15px;
+				line-height: 17px;
+				font-weight: 900;
+				padding: 16px 19px;
+				text-transform: uppercase;
+				border: 1px solid transparent;
+				z-index: 2;
+				@include media("<widescreen")  {
+					padding: 16px 10px;
+				}
+				@include media("<desktop") {
+					font-size: 14px;
+					line-height: 17px;
+				}
+				@include media("<tablet") {
+					padding: 10px;
+				}
+				&:hover {
+					color: $green;
+					background: #f5f7fa;
+					border: 1px solid #e4e8ec;
+					border-radius: 3px;
+				}
+			}
+		}
+		> .open {
+			> a {
+				color: $green;
+				background: #f5f7fa;
+				border: 1px solid #e4e8ec;
+				border-width: 1px 1px 0 1px;
+				border-radius: 3px 3px 0 0;
+				&:hover {
+					color: $green;
+					background: #f5f7fa;
+					border-width: 1px 1px 0 1px;
+					border-radius: 3px 3px 0 0;
+				}
+			}
+		}
+	}
+	.navbar-toggle {
+		margin: 0;
+		border-color: $blue;
+		outline: none;
+		@include media("print") {
+			display: none;
+		}
+		&:hover {
+			border-color: $green;
+			background: none;
+			.icon-bar {
+				background-color: $green;
+			}
+		}
+		.icon-bar {
+			background-color: $blue;
+		}
+	}
+	.navbar-collapse {
+		border: none;
+	}
+}

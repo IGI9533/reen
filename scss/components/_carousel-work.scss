@@ -1,0 +1,65 @@
+.works-carousel {
+	margin: 0 -30px 0 0;
+	width: auto;
+	@include media("<desktop") {
+		margin: 0;
+	}
+	@include media("print") {
+		display: none !important;
+	}
+	.item {
+		padding: 0 30px 0 0;
+		@include media("<desktop") {
+			padding: 0 15px;
+		}
+	}
+	.owl-controls {
+		padding: 0 30px 0 0;
+		@include media("<desktop") {
+			padding: 0;
+		}
+		.owl-buttons {
+			position: relative;
+			max-width: 160px;
+			margin: 0 auto;
+			@include media("<tablet") {
+				max-width: none;
+			}
+			div {
+				height: 30px;
+				width: 30px;
+				background: #c9d2da;
+				top: 3px;
+				&:hover {
+					background: #506a85;
+					&:before {
+						color: $green;
+					}
+				}
+				&:before {
+					font-size: 14px;
+					color: #f5f8f9;
+				}
+			}
+			.owl-next {
+				right: 0;
+				@include media("<tablet") {
+					right: 15px;
+				}
+			}
+			.owl-prev {
+				left: 0;
+				@include media("<tablet") {
+					left: 15px;
+				}
+			}
+		}
+	}
+	.owl-wrapper-outer {
+		margin: 0 0 37px;
+	}
+	.hover {
+		padding: 70px 0 0;
+	}
+}
+

@@ -1,0 +1,34 @@
+#back-top {
+	@include animate (background, 0.2s);
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	background: #3c5065;
+	border-radius: 3px;
+	@include media("<widescreen") {
+		background: rgba(60,80,101, 0.8);
+	}
+	@include media("print") {
+		display: none !important;
+	}
+	&:before {
+		@include animate (color, 0.2s);
+		font-size: 16px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -8px 0 0 -8px;
+		color: #949ba2;
+	}
+	&:hover {
+		background: #506a85;
+		&:before {
+			color: $green;
+		}
+	}
+	span {
+		display: none;
+	}
+}

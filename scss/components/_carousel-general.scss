@@ -1,0 +1,153 @@
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	@include media("print") {
+		width: 100%;
+	}
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel .owl-item{
+	position: relative;
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+/* .grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+} */
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+.owl-carousel .owl-item img {
+	width: 100%;
+	@include media("print") {
+		display: none;
+	}
+}
+.owl-controls {
+	text-align: center;
+	.owl-buttons {
+		div {
+			@include animate (background, 0.2s);
+			position: absolute;
+			top: 50%;
+			width: 60px;
+			height: 60px;
+			border-radius: 4px;
+			margin-top: -30px;
+			font-size: 0;
+			background: rgba(80, 106, 133, 0.3);
+			&:hover {
+				background: #506a85;
+				&:before {
+					color: $green;
+				}
+			}
+			&:before {
+				@include animate (color, 0.2s);
+				content:'';
+				display:block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-family: 'icomoon';
+				font-size: 26px;
+				color: #7b8fa3;
+				@include media("<tablet") {
+					font-size: 18px;
+				}
+			}
+		}
+		.owl-next {
+			right: 30px;
+			@include media("<lg-widescreen") {
+				right: 10px;
+			}
+			&:before {
+				content:'\e901';
+			}
+		}
+		.owl-prev {
+			left: 30px;
+			@include media("<lg-widescreen") {
+				left: 10px;
+			}
+			&:before {
+				content:'\e900';
+			}
+		}
+	}
+	.owl-pagination {
+		position: relative;
+		display: inline-block;
+		padding: 6px 10px 0;
+		border-radius: 4px;
+		.owl-page {
+			width: 15px;
+			height: 15px;
+			background: $blue;
+			border-radius: 50%;
+			display: inline-block;
+			margin: 0 5px;
+			&.active,
+			&:hover {
+				background: $green;
+			}
+		}
+	}
+}

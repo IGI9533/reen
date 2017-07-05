@@ -1,0 +1,140 @@
+#header {
+	.navbar {
+		border: none;
+		background: none;
+	}
+	.logo {
+		@include animate (opacity, 0.3s);
+		@include media("<tablet") {
+			margin-top: 2px;
+		}
+		@include media("print") {
+			text-align: center;
+		}
+		img {
+			@include animate (width, 0.2s);
+			width: 161px;
+			&:hover {
+				opacity: 0.6;
+			}
+			@include media("<desktop") {
+				width: 120px;
+			}
+		}
+	}
+	.fixed {
+		box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+		.logo {
+			@include media("<tablet") {
+				margin-top: 6px;
+			}
+			img {
+				width: 80px;
+				@include media("print") {
+					width: 161px;
+				}
+			}
+		}
+		&.header-bottom {
+			padding: 0;
+			.navbar-header {
+				padding: 11px 0 0;
+				margin: 0 60px 0 0;
+				@include media("<tablet") {
+					margin: 0;
+					padding: 11px 15px;
+				}
+				@include media("print") {
+					margin: 0;
+				}
+			}
+		}
+		.navbar-main {
+			margin: 0;
+		}
+	}
+}
+.header-top {
+	background: #f5f7fa;
+	border-bottom: 1px solid #e6e9ed;
+	color: $blue;
+	@include media("<desktop") {
+		padding: 0 15px;
+	}
+	.contacts {
+		@extend %listreset;
+		padding: 12px 0 0;
+		@include media("<low-phone") {
+			width: 100%;
+			text-align: center;
+		}
+		@include media("print") {
+			padding: 10px 0;
+		}
+		li {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 20px 0 0;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				@include animate (color, 0.1s);
+				display: block;
+				font-size: 12px;
+				line-height: 14px;
+				&:hover {
+					text-decoration: none;
+					color: $green;
+				}
+			}
+			i {
+				vertical-align: middle;
+				font-size: 14px;
+				margin: 0 6px 0 0;
+			}
+		}
+	}
+}
+.header-bottom {
+	@include animate(padding, 0.2s);
+	padding: 32px 0 0;
+	background: $white;
+	z-index: 100;
+	@include media("<tablet") {
+		padding: 10px 15px 0;
+	}
+	.navbar-header {
+		margin: 0 69px 0 0;
+		padding: 4px 0 0;
+		@include media("<widescreen") {
+			margin: 0 20px 0 0;
+		}
+		@include media("<tablet") {
+			margin: 0;
+		}
+		@include media("print") {
+			float: none;
+			margin: 0;
+		}
+	}
+	.icon-search {
+		font-size: 18px;
+		margin: 16px 6px 0 0;
+		cursor: pointer;
+		@include media("<desktop") {
+			margin: 16px 0 0;
+		}
+		@include media("<tablet") {
+			margin: 0 8px 10px;
+			display: inline-block;
+		}
+		@include media("print") {
+			display: none;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $green;
+		}
+	}
+}

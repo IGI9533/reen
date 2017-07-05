@@ -1,0 +1,75 @@
+html{height:100%;}
+body {
+	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+	height: 100%;
+	@include media("<desktop") {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	@include media("print") {
+		font-size: 13px;
+		line-height: 15px;
+	}
+}
+h1 {
+	margin: 0 0 20px;
+	font-family: $font-family2;
+}
+h2 {
+	font-family: $font-family2;
+	font-size: 44px;
+	line-height: 46px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 0 30px;
+	@include media("<desktop") {
+		font-size: 36px;
+		line-height: 38px;
+		margin: 0 0 20px;
+	}
+	@include media("<phone") {
+		font-size: 24px;
+		line-height: 26px;
+	}
+	@include media("print") {
+		font-size: 24px;
+		line-height: 26px;
+	}
+}
+p {
+	margin: 0 0 15px;
+}
+.bg-primary {
+	background: #f2f5f7;
+	color: $blue;
+}
+.fixed {
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	@include media("print") {
+		position: static;
+	}
+}
+.accessibility{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+	&:focus {
+		position:static;
+		width:auto;
+		height:auto;
+	}
+}
+.hidden{
+	position:absolute;
+	left:-9999px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}

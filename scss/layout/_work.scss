@@ -1,0 +1,47 @@
+.latest-work {
+	padding: 33px 0 0;
+	margin-bottom: 80px;
+	@include media("<tablet") {
+		padding: 20px 15px 0;
+		margin-bottom: 50px;
+	}
+	@include media("print") {
+		display: none;
+	}
+	.item {
+		@include media("<tablet") {
+			margin-bottom: 15px;
+		}
+	}
+	.title-holder {
+		border: 1px solid #e6e9ed;
+		border-width: 0 1px 2px 1px;
+		background: $white;
+		padding: 29px 5px;
+		text-align: center;
+		@include media("<tablet") {
+			padding: 15px 5px;
+		}
+	}
+	.title {
+		font-size: 21px;
+		line-height: 23px;
+		font-family: $font-family2;
+		font-weight: bold;
+		@include media("<desktop") {
+			font-size: 18px;
+			line-height: 20px;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $green;
+		}
+	}
+	span {
+		color: #73879c;
+		font-size: 14px;
+		line-height: 16px;
+		display: block;
+		padding: 10px 0 0;
+	}
+}

@@ -1,0 +1,183 @@
+.footer-top {
+	background: #2f4052;
+	color: #a3b1bf;
+	padding: 70px 0;
+	font-size: 14px;
+	line-height: 21px;
+	@include media("<desktop") {
+		padding: 40px 0 0;
+	}
+	h3 {
+		color: $white;
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: normal;
+		margin: 0 0 23px;
+	}
+	a {
+		color: #a3b1bf;
+	}
+	.logo {
+		@include animate (opacity, 0.3s);
+		margin: 0 0 23px;
+		img {
+			width: 129px;
+			height: 32px;
+		}
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+	.more {
+		font-size: 15px;
+		line-height: 17px;
+		font-weight: bold;
+		i {
+			@include animate (margin, 0.3s);
+			font-size: 8px;
+			vertical-align: middle;
+			margin: 0 0 0 5px;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $green;
+			i {
+				margin: 0 0 0 10px;
+			}
+		}
+	}
+	.works {
+		font-size: 0;
+		@include media("<low-phone") {
+			width: 70%;
+		}
+		@include media("<=xs-phone") {
+			width: 100%;
+		}
+	}
+	.image-block {
+		width: 48%;
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 2% 5px 0;
+		font-size: 16px;
+	}
+	.contacts {
+		@extend %listreset;
+		address {
+			margin: 0;
+		}
+		li {
+			margin: 0 0 2px;
+		}
+		a {
+			&:hover {
+				color: $green;
+				text-decoration: none;
+			}
+		}
+		i {
+			vertical-align: middle;
+			margin: 0 7px 0 0;
+		}
+	}
+	.subscribe-form {
+		.form-group {
+			position: relative;
+		}
+		.form-control {
+			padding-right: 105px;
+		}
+		.btn {
+			position: absolute;
+			top: 4px;
+			right: 4px;
+			font-size: 13px;
+			line-height: 15px;
+			padding: 7px 12px;
+		}
+	}
+	.item {
+		@include media("<desktop") {
+			margin: 0 0 40px;
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			float: none;
+		}
+		@include media("<low-phone") {
+			width: 100%;
+		}
+	}
+}
+.footer-bottom {
+	background: #283645;
+	color: #707e8c;
+	padding: 28px 0 15px;
+	@include media("<phone") {
+		padding: 15px 0;
+	}
+	@include media("print") {
+		padding: 0;
+	}
+	.nav-footer {
+		@include media("print") {
+			display: none;
+		}
+		li {
+			display: inline-block;
+			position: relative;
+			margin: 0 0 0 8px;
+			padding: 0 0 0 12px;
+			@include media("<phone") {
+				width: 100%;
+				padding: 0;
+				margin: 0 0 7px;
+			}
+			&:first-child {
+				&:before {
+					display: none;
+				}
+			}
+			&:before {
+				content:'.';
+				display:block;
+				position: absolute;
+				line-height: 8px;
+				top: 0;
+				left: 0;
+			}
+			a {
+				font-size: 14px;
+				line-height: 16px;
+				padding: 0;
+				@include media("<phone") {
+					font-size: 14px;
+					line-height: 16px;
+					display: inline-block;
+				}
+				&:hover {
+					color: $green;
+					background: none;
+				}
+			}
+		}
+	}
+	.copy {
+		font-size: 15px;
+		line-height: 16px;
+		padding: 5px 0 0;
+		float: left;
+		@include media("<desktop") {
+			float: none;
+			text-align: center;
+		}
+	}
+	nav {
+		float: right;
+		@include media("<desktop") {
+			float: none;
+			text-align: center;
+		}
+	}
+}
